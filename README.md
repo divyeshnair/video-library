@@ -22,12 +22,12 @@ Sqlite.
         
       * Apply the database changes by running this command-
         docker run -e YOUTUBE_KEYS='[(enter-your-keys)]' 
-        -v <your-host-machine-database-path>:/video-library/database 
+        -v [your-host-machine-database-path]:/video-library/database 
         video-library:1.0.0 python manage.py db upgrade
         
       * Start the server by running the command - 
         docker run -e YOUTUBE_KEYS='[(enter-your-keys)]' 
-        -v <your-host-machine-database-path>:/video-library/database 
+        -v [your-host-machine-database-path]:/video-library/database 
         video-library:1.0.0 python manage.py server --host=0.0.0.0
         
 * APIs
