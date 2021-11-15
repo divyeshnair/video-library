@@ -1,0 +1,12 @@
+# Pull base image
+FROM python:3.8-buster
+
+RUN mkdir /video-library
+WORKDIR /video-library
+
+COPY . .
+
+RUN pip3 install -r requirements.txt \
+  && rm -rf ~/.cache
+
+CMD python manage.py server --host=0.0.0.0
